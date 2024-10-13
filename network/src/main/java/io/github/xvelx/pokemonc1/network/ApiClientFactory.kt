@@ -30,6 +30,7 @@ class ApiClientFactory @Inject internal constructor() {
         val okhttpInstance by lazy {
             OkHttpClient.Builder()
                 .addInterceptor(
+                    // TODO: This should be included only for debug flavor
                     HttpLoggingInterceptor().apply {
                         setLevel(HttpLoggingInterceptor.Level.BODY)
                     }
