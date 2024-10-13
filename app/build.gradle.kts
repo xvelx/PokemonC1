@@ -39,6 +39,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+        freeCompilerArgs += listOf(
+            "-Xcontext-receivers",
+        )
     }
     buildFeatures {
         compose = true
@@ -69,6 +72,8 @@ dependencies {
     runtimeOnly(project(":data"))
 
     testImplementation(libs.junit)
+    testImplementation(platform(libs.strikt.bom))
+    testImplementation(libs.bundles.test)
 
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

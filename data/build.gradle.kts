@@ -42,5 +42,6 @@ dependencies {
     implementation(libs.jetpack.paging.core)
 
     testImplementation(libs.junit)
-
+    testImplementation(platform(libs.strikt.bom))
+    testImplementation(libs.bundles.test)
 }
