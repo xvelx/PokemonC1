@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PokemonC1</string>
+    <string name="app_bar_title">Pokemon</string>
+    <string name="size_content">Height: %s \t\t\t Weight: %s</string>
+    <string name="header_ability">Ability</string>
+    <string name="header_stats">Stats</string>
 </resources>

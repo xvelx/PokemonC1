@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "io.github.xvelx.domain"
+    namespace = "io.github.xvelx.pokemonc1.domain"
     compileSdk = 34
 
     defaultConfig {
@@ -33,6 +33,8 @@ android {
 dependencies {
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
+
+    implementation(libs.jetpack.paging.core)
 
     testImplementation(libs.junit)
 }

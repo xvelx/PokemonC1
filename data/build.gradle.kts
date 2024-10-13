@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "io.github.xvelx.data"
+    namespace = "io.github.xvelx.pokemonc1.data"
     compileSdk = 34
 
     defaultConfig {
@@ -39,7 +39,7 @@ dependencies {
 
     implementation(project(":domain"))
     implementation(project(":network"))
-//    implementation(libs.jackson.annotations)
+    implementation(libs.jetpack.paging.core)
 
     testImplementation(libs.junit)
 

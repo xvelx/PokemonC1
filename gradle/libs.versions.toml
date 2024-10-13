@@ -22,6 +22,10 @@ viewmodelKtx = "2.8.6"
 appcompat = "1.7.0"
 material = "1.12.0"
 jacksonAnnotations = "2.18.0"
+jetpackPaging = "3.3.2"
+coil = "2.7.0"
+navCompose = "2.8.2"
+hiltNavCompose = "1.2.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -38,7 +42,10 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+
 androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "viewmodelKtx" }
+jetpack-paging-core = { group = "androidx.paging", name = "paging-runtime", version.ref = "jetpackPaging" }
+jetpack-paging-compose = { group = "androidx.paging", name = "paging-compose", version.ref = "jetpackPaging" }
 
 # Network
 retrofit-bom = { group = "com.squareup.retrofit2", name = "retrofit-bom", version.ref = "retrofitBom" }
@@ -54,6 +61,9 @@ hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", v
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 jackson-annotations = { group = "com.fasterxml.jackson.core", name = "jackson-annotations", version.ref = "jacksonAnnotations" }
+coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
+compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navCompose" }
+hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavCompose" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -73,4 +83,9 @@ network = [
     "retrofit-converter-jackson",
     "kotlinx-serialization",
     "okhttp-interceptor-logging"
+]
+
+ui-paging = [
+    "jetpack-paging-core",
+    "jetpack-paging-compose"
 ]

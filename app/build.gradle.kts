@@ -5,6 +5,9 @@ plugins {
 
     id(libs.plugins.kotlin.kapt.get().toString())
     alias(libs.plugins.hilt)
+    libs.plugins.kotlin.serialization.get().let {
+        kotlin(it.pluginId) version it.version.requiredVersion
+    }
 }
 
 android {
@@ -53,8 +56,14 @@ dependencies {
     implementation(libs.androidx.material3)
 
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.bundles.ui.paging)
+    implementation(libs.coil)
+    implementation(libs.compose.navigation)
+    implementation(libs.hilt.navigation.compose)
+
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
+    implementation(libs.kotlinx.serialization)
 
     implementation(project(":domain"))
     runtimeOnly(project(":data"))
